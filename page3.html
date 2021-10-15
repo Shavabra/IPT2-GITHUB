@@ -1,0 +1,72 @@
+<html>
+
+    <head>
+    
+        <title>Page Two</title>
+        
+       <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body class = "bg">
+        <script>function display_ct6() {
+var x = new Date()
+var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+hours = x.getHours( ) % 12;
+hours = hours ? hours : 12;
+var x1=x.getMonth() + 1+ "-" + x.getDate() + "-" + x.getFullYear(); 
+x1 = x1 + "  -  " +  hours + ":" +  x.getMinutes() + ":" +  x.getSeconds() + ":" + ampm;
+document.getElementById('ct6').innerHTML = x1;
+display_c6();
+ }
+ function display_c6(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct6()',refresh)
+}
+display_c6()
+</script>
+        
+        <center><h1>This Is Page Three<br><span id='ct6' style="background-color: black, font-size : 24px"></h1></center>
+        <button class = "btn4" onclick="window.location.href = 'index.html'">Go Back To Index</button>
+        
+        <div class  = "indent">
+    
+         <div class = "table">
+            <div class = "row">
+                <div class = "cell">
+                    <a href = "page1.html"><p>Page One</p></a>
+                        <p>This is how to make a HTML</p>
+                    
+                </div>
+                
+                <div class = "cell">
+                    <a href = "page2.html"><p>Page Two</p></a>
+                        <p>This is how to use the paragraph tag</p>
+                    
+                </div>
+                
+                <div class = "cell">
+                    <a href = "page3.html"><p>Page Three</p></a>
+                    <p>A javascript to show the time and date</p>
+                </div>
+            </div>
+            
+             <div class = "row">
+                <div class = "cell">
+                    <a href = "page4.html"><p>Page Four</p></a>
+                        <p>This is how to insert image</p>  
+                </div>
+                
+                <div class = "cell">
+                    <a href = "page5.html">Page Five</a>
+                    <p>This is how to use button tag</p>
+                </div>
+                
+                <div class = "cell">
+                    <a href = "page6.html"><p>Page Six</p> </a>
+                   <p>This is how to use iframe tag</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
