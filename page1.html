@@ -1,20 +1,33 @@
+
 <html>
 
     <head>
     
-        <title>Page Six</title>
+        <title>Page One</title>
         
        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     
     <body class = "bg">
-        <center><h1>This Is Page Six<br>
-        <iframe width="720" height="420" src="https://www.youtube.com/embed/bEp-4ZUKLss?autoplay=1&mute=1"  allowfullscreen></iframe></h1><br>
-        <button class = "btn3" onclick="window.location.href = 'page6v3.html'">Previous</button>
-        <button class = "btn3" onclick="window.location.href = 'page6v2.html'">Next</button>
-        <center>
+        <script>function display_ct6() {
+var x = new Date()
+var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+hours = x.getHours( ) % 12;
+hours = hours ? hours : 12;
+var x1=x.getMonth() + 1+ "-" + x.getDate() + "-" + x.getFullYear(); 
+x1 = x1 + "  -  " +  hours + ":" +  x.getMinutes() + ":" +  x.getSeconds() + ":" + ampm;
+document.getElementById('ct6').innerHTML = x1;
+display_c6();
+ }
+ function display_c6(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct6()',refresh)
+}
+display_c6()
+</script>
         
-        <button class = "btn4" onclick="window.location.href = 'index.html'">Go Back To Index</button>
+    <center><h1>This Is Page One<br>Congratulation On Making The First Page</h1></center>
+    <button class = "btn4" onclick="window.location.href = 'index.html'">Go Back To Index</button>    
         
         <div class  = "indent">
     
@@ -55,8 +68,9 @@
                 </div>
             </div>
         </div>
+            
         </div>
-    
         
+   
     </body>
 </html>
